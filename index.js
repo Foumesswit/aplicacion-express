@@ -28,7 +28,7 @@ app.get('/todos', function (req, res) {
             res.status(500).json({ error: 'Error al obtener los todos' });
             return;
         }
-        res.status(200).json(todos);
+        res.status(201).json(todos);
     });
 });
 
@@ -53,7 +53,7 @@ app.post('/agregar_todo', jsonParser, function (req, res) {
             res.status(500).json({ error: 'Error al insertar el todo' });
             return;
         }
-        res.status(200).json({ id: todoId, mensaje: 'Todo insertado correctamente' });
+        res.status(201).json({ id: todoId, mensaje: 'Todo insertado correctamente' });
     });
 });
 
